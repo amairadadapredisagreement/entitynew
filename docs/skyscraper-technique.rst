@@ -180,26 +180,26 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/skyscraper-technique/>`
 5. Công cụ hỗ trợ
 -----------------
 
-.. grid:: 1 2 2
-   :gutter: 3
+.. list-table:: 
+   :widths: 50 50
+   :header-rows: 0
+   :class: sd-rounded-3 sd-shadow-sm
 
-   .. grid-item-card::
-      :class: sd-shadow-sm
-      :text-align: center
+   * - .. card:: 
+          :class: text-center
 
-      **Phân tích đối thủ**
-      
-      - `Ahrefs <https://ahrefs.com/>`_
-      - `SEMrush <https://semrush.com/>`_
+          **Phân tích đối thủ**
+          
+          - `Ahrefs <https://ahrefs.com/>`_
+          - `SEMrush <https://semrush.com/>`_
 
-   .. grid-item-card::
-      :class: sd-shadow-sm
-      :text-align: center
+     - .. card:: 
+          :class: text-center
 
-      **Tạo nội dung**
-      
-      - `Canva <https://canva.com/>`_
-      - `Datawrapper <https://datawrapper.de/>`_
+          **Tạo nội dung**
+          
+          - `Canva <https://canva.com/>`_
+          - `Datawrapper <https://datawrapper.de/>`_
 
 Kết luận
 --------
