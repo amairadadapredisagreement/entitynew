@@ -35,6 +35,13 @@ extensions = [
     "sphinx.ext.graphviz",
 ]
 
+graphviz_output_format = 'svg'  # Hoặc 'png'
+graphviz_dot_args = [
+    '-Gfontname=Helvetica',
+    '-Nfontname=Helvetica',
+    '-Efontname=Helvetica'
+]
+
 intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
     "python": ("https://docs.python.org/3/", None),
