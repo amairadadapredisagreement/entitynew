@@ -183,19 +183,19 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/guest-blogging/>`_, **6
 6. Công cụ kiểm tra chất lượng
 ------------------------------
 
-.. tabs::
+.. tab-set::
 
-   .. tab:: Miễn phí
+   .. tab-item:: Miễn phí
       :sync: free
 
-      - `Google Search Console <https://search.google.com/search-console>`_
-      - `MozBar <https://moz.com/products/pro/seo-toolbar>`_
+      - **Google Search Console**: `search.google.com/search-console <https://search.google.com/search-console>`_
+      - **MozBar**: `moz.com/products/pro/seo-toolbar <https://moz.com/products/pro/seo-toolbar>`_
 
-   .. tab:: Trả phí
+   .. tab-item:: Trả phí
       :sync: paid
 
-      - `Ahrefs <https://ahrefs.com/>`_
-      - `SEMrush <https://semrush.com/>`_
+      - **Ahrefs**: `ahrefs.com <https://ahrefs.com/>`_
+      - **SEMrush**: `semrush.com <https://semrush.com/>`_
 
 7. Template quản lý công việc
 -----------------------------
