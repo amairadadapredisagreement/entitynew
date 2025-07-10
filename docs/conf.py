@@ -35,6 +35,7 @@ extensions = [
     "sphinx.ext.graphviz",
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',   
 ]
 
 graphviz_output_format = 'svg'  # Hoặc 'png'
