@@ -118,32 +118,27 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/skyscraper-technique/>`
 
 ### 2.4 Bước 4: Outreach thông minh
 
-.. tabs::
+.. tab-set::
 
-   .. tab:: Email Template
+   .. tab-item:: Email Template
       :sync: email
 
       .. code-block:: text
          :caption: skyscraper_outreach.txt
 
          Chủ đề: Cập nhật mới về [Chủ đề] cho độc giả của bạn
-
          Xin chào [Tên],
-
          Tôi thấy bạn đã chia sẻ bài viết "[Bài viết cũ]" trên [Website của họ].
-
          Tôi vừa xuất bản bản cập nhật 2025 với:
          - [3 điểm khác biệt nổi bật]
          - [Dữ liệu mới từ nghiên cứu]
          - [Công cụ tương tác miễn phí]
-
          Bạn có muốn cập nhật link cho độc giả không?
          [Link bài mới]
-
          Cảm ơn,
          [Tên bạn]
 
-   .. tab:: Công cụ
+   .. tab-item:: Công cụ
       :sync: tools
 
       - `Hunter.io <https://hunter.io/>`_: Tìm email
@@ -180,26 +175,24 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/skyscraper-technique/>`
 5. Công cụ hỗ trợ
 -----------------
 
-.. list-table:: 
-   :widths: 50 50
-   :header-rows: 0
-   :class: sd-rounded-3 sd-shadow-sm
+.. grid:: 2
+   :gutter: 2
 
-   * - .. card:: 
-          :class: text-center
+   .. grid-item::
+      :class: sd-shadow-sm
 
-          **Phân tích đối thủ**
-          
-          - `Ahrefs <https://ahrefs.com/>`_
-          - `SEMrush <https://semrush.com/>`_
+      **Phân tích đối thủ**
+      
+      - `Ahrefs <https://ahrefs.com/>`_
+      - `SEMrush <https://semrush.com/>`_
 
-     - .. card:: 
-          :class: text-center
+   .. grid-item::
+      :class: sd-shadow-sm
 
-          **Tạo nội dung**
-          
-          - `Canva <https://canva.com/>`_
-          - `Datawrapper <https://datawrapper.de/>`_
+      **Tạo nội dung**
+      
+      - `Canva <https://canva.com/>`_
+      - `Datawrapper <https://datawrapper.de/>`_
 
 Kết luận
 --------
