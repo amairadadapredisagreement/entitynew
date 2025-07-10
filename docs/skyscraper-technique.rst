@@ -27,6 +27,7 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/skyscraper-technique/>`
    BL_{new} = \frac{QL_{new} \times (D_{update} + V_{media})}{TL_{old}}
 
 *Trong đó*:
+
 - *BL<sub>new</sub>*: Backlink mới thu được
 
 - *QL<sub>new</sub>*: Chất lượng nội dung mới (từ 1-10)
