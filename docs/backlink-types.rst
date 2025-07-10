@@ -1,7 +1,7 @@
-.. _backlink-types:
-
 Các Dạng Backlink Thường Gặp Trong SEO
 ======================================
+
+.. _backlink-types:
 
 **Backlink** (liên kết ngược) là yếu tố quan trọng nhất trong xây dựng **authority website**. Bài viết này phân tích 7 loại backlink phổ biến nhất theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/types-of-backlinks/>`_.
 
