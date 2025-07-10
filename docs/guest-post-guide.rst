@@ -79,6 +79,7 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/guest-blogging/>`_, **6
 ---------------------------
 
 ### 2.1 Email template tỷ lệ phản hồi cao
+
 .. code-block:: text
    :caption: guest_post_outreach.txt
    :emphasize-lines: 3,7
