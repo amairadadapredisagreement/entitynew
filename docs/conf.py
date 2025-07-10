@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Backlink Information"
+project = "Backlink"
 copyright = "2025, Backlink Entity New"
 author = "Backlink Entity New"
 
