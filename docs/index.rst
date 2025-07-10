@@ -94,7 +94,7 @@ Bạn có thể sử dụng các công cụ:
    </div>
 
 .. toctree::
-   :maxdepth: 2
-   :caption: SEO Guide
+
+   Home <self>
    
-   backlink_types
+
