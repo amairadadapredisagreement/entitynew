@@ -3,7 +3,7 @@
 Skyscraper 2.0: Kỹ thuật đột phá để "cướp" backlink của đối thủ
 ================================================================
 
-.. figure:: https://backlinko.com/hubfs/skyscraper-technique.jpg
+.. figure:: https://miro.medium.com/v2/resize:fit:720/format:webp/1*WX3dpUWS34PVLQN1zpe1JQ.png
    :alt: Skyscraper Technique của Brian Dean
    :width: 800
    :align: center
