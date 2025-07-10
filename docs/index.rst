@@ -99,4 +99,5 @@ Bạn có thể sử dụng các công cụ:
    backlink-types
    backlink-la-gi
    backlink-importance
+   backlink-glossary
 
