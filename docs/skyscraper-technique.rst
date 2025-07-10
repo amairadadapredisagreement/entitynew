@@ -184,18 +184,22 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/skyscraper-technique/>`
    :gutter: 3
 
    .. grid-item-card::
+      :class: sd-shadow-sm
       :text-align: center
 
       **Phân tích đối thủ**
-      `Ahrefs <https://ahrefs.com/>`_
-      `SEMrush <https://semrush.com/>`_
+      
+      - `Ahrefs <https://ahrefs.com/>`_
+      - `SEMrush <https://semrush.com/>`_
 
    .. grid-item-card::
+      :class: sd-shadow-sm
       :text-align: center
 
       **Tạo nội dung**
-      `Canva <https://canva.com/>`_
-      `Datawrapper <https://datawrapper.de/>`_
+      
+      - `Canva <https://canva.com/>`_
+      - `Datawrapper <https://datawrapper.de/>`_
 
 Kết luận
 --------
