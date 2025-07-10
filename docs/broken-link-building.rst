@@ -88,9 +88,13 @@ Theo nghiên cứu từ `Moz <https://moz.com/blog/broken-link-building>`_, **89
    Q_{new} = Q_{old} \times 1.5 + \Delta_{data} + \Delta_{media}
 
 *Trong đó*:
+
 - *Q<sub>new</sub>*: Chất lượng nội dung mới
+
 - *Q<sub>old</sub>*: Chất lượng nội dung cũ
+
 - *Δ<sub>data</sub>*: Giá trị gia tăng từ dữ liệu mới
+
 - *Δ<sub>media</sub>*: Giá trị từ multimedia
 
 3. Nghệ thuật outreach thành công
