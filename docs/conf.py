@@ -33,6 +33,8 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_design",
     "sphinx.ext.graphviz",
+    'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon',
 ]
 
 graphviz_output_format = 'svg'  # Hoặc 'png'
