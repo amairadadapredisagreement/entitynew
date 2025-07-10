@@ -22,23 +22,26 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/guest-blogging/>`_, **6
 -------------------------------------
 
 ### 1.1 Chỉ số chất lượng
-.. list-table:: 
+
+.. list-table:: Tiêu chuẩn đánh giá website Guest Post
    :widths: 25 25 25 25
    :header-rows: 1
+   :align: center
+   :class: longtable
 
    * - **Chỉ số**
      - **Giá trị tối thiểu**
      - **Tool kiểm tra**
      - **Ý nghĩa**
-   * - Domain Authority (DA)
+   * - **Domain Authority (DA)**
      - ≥ 40
      - `MozBar <https://moz.com/products/pro/seo-toolbar>`_
      - Độ uy tín tổng thể
-   * - Trust Flow (TF)
+   * - **Trust Flow (TF)**
      - ≥ 20
      - `Majestic <https://majestic.com/>`_
      - Độ tin cậy backlink
-   * - Traffic
+   * - **Traffic**
      - ≥ 10K/tháng
      - `SimilarWeb <https://www.similarweb.com/>`_
      - Lượt xem thực tế
