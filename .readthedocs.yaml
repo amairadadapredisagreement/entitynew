@@ -17,10 +17,12 @@ build:
    apt_packages:
       - graphviz
       - libcairo2-dev
+      - libpango1.0-dev
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
    configuration: docs/conf.py
+   fail_on_warning: true
 
 # If using Sphinx, optionally build your docs in additional formats such as PDF
 # formats:
