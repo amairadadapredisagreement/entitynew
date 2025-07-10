@@ -1,87 +1,94 @@
-Example: Basic Sphinx project for Read the Docs
-===============================================
+.. _backlink-intro:
 
-.. image:: https://readthedocs.org/projects/example-sphinx-basic/badge/?version=latest
-    :target: https://example-sphinx-basic.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
+Tác dụng của Backlink trong SEO và Xây dựng Website
+==================================================
 
-.. This README.rst should work on Github and is also included in the Sphinx documentation project in docs/ - therefore, README.rst uses absolute links for most things so it renders properly on GitHub
+**Backlink** (liên kết ngược) là một trong những yếu tố quan trọng nhất trong chiến lược SEO. Bài viết này sẽ giải thích tại sao backlink lại quan trọng và cách sử dụng chúng hiệu quả.
 
-This example shows a basic Sphinx project with Read the Docs. You're encouraged to view it to get inspiration and copy & paste from the files in the source code. If you are using Read the Docs for the first time, have a look at the official `Read the Docs Tutorial <https://docs.readthedocs.io/en/stable/tutorial/index.html>`__.
+.. contents::
+   :depth: 2
+   :local:
 
-📚 `docs/ <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/>`_
-    A basic Sphinx project lives in ``docs/``. All the ``*.rst`` make up sections in the documentation.
-⚙️ `.readthedocs.yaml <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/.readthedocs.yaml>`_
-    Read the Docs Build configuration is stored in ``.readthedocs.yaml``.
-⚙️ `docs/conf.py <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/conf.py>`_
-    Both the configuration and the folder layout follow Sphinx default conventions. You can change the `Sphinx configuration values <https://www.sphinx-doc.org/en/master/usage/configuration.html>`_ in this file
-📍 `docs/requirements.txt <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/requirements.txt>`_ and `docs/requirements.in <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/requirements.in>`_
-    Python dependencies are `pinned <https://docs.readthedocs.io/en/latest/guides/reproducible-builds.html>`_ (uses `pip-tools <https://pip-tools.readthedocs.io/en/latest/>`_). Make sure to add your Python dependencies to ``requirements.txt`` or if you choose `pip-tools <https://pip-tools.readthedocs.io/en/latest/>`_, edit ``docs/requirements.in`` and remember to run ``pip-compile docs/requirements.in``.
-💡 `docs/api.rst <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/api.rst>`_
-    By adding our example Python module ``lumache`` in the reStructuredText directive ``:autosummary:``, Sphinx will automatically scan this module and generate API docs.
-💡 `docs/usage.rst <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/docs/usage.rst>`_
-    Sphinx can automatically extract API documentation directly from Python modules, using for instance the ``:autofunction:`` directive.
-💡 `lumache.py <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/lumache.py>`_
-    API docs are generated for this example Python module - they use *docstrings* directly in the documentation, notice how this shows up in the rendered documentation.
-🔢 Git tags versioning
-    We use a basic versioning mechanism by adding a git tag for every release of the example project. All releases and their version numbers are visible on `example-sphinx-basic.readthedocs.io <https://example-sphinx-basic.readthedocs.io/en/latest/>`__.
-📜 `README.rst <https://github.com/readthedocs-examples/example-sphinx-basic/blob/main/README.rst>`_
-    Contents of this ``README.rst`` are visible on Github and included on `the documentation index page <https://example-sphinx-basic.readthedocs.io/en/latest/>`_ (Don't Repeat Yourself).
-⁉️ Questions / comments
-    If you have questions related to this example, feel free to can ask them as a Github issue `here <https://github.com/readthedocs-examples/example-sphinx-basic/issues>`_.
+1. Khái niệm cơ bản
+-------------------
 
+**Backlink** là những liên kết từ website khác trỏ về trang web của bạn. Theo `Moz <https://moz.com/learn/seo/backlinks>`_, backlink được xem như *"phiếu bầu"* về độ tin cậy của website.
 
-Example Project usage
----------------------
+2. Tác dụng chính của backlink
+-----------------------------
 
-This project has a standard Sphinx layout which is built by Read the Docs almost the same way that you would build it locally (on your own laptop!).
+*2.1. Cải thiện thứ hạng SEO*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can build and view this documentation project locally - we recommend that you activate `a local Python virtual environment first <https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment>`_:
+- **Google Ranking Factor**: Backlink là 1 trong 3 yếu tố xếp hạng quan trọng nhất theo `Google Search Central <https://developers.google.com/search/docs/advanced/guidelines/quality-links>`_
+- **Domain Authority**: Tăng điểm trust của website (theo thang điểm Moz DA)
 
-.. code-block:: console
+*2.2. Tăng lượng truy cập gián tiếp*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    # Install required Python dependencies (Sphinx etc.)
-    pip install -r docs/requirements.txt
+- **Referral Traffic**: Người dùng có thể click qua website bạn từ nguồn khác
+- **Brand Awareness**: Giúp thương hiệu xuất hiện ở nhiều nơi
 
-    # Enter the Sphinx project
-    cd docs/
-    
-    # Run the raw sphinx-build command
-    sphinx-build -M html . _build/
+3. Phân loại backlink chất lượng
+--------------------------------
 
+.. list-table:: 
+   :widths: 30 70
+   :header-rows: 1
 
-You can also build the documentation locally with ``make``:
+   * - Loại backlink
+     - Ví dụ
+   * - **Editorial Links**
+     - Liên kết tự nhiên trong nội dung (ví dụ: `Wikipedia <https://www.wikipedia.org/>`_)
+   * - **Guest Post Links**
+     - Bài viết khách trên site uy tín
+   * - **Directory Links**
+     - Danh bạ dofollow chất lượng
 
-.. code-block:: console
+4. Cách kiểm tra backlink
+-------------------------
 
-    # Enter the Sphinx project
-    cd docs/
-    
-    # Build with make
-    make html
-    
-    # Open with your preferred browser, pointing it to the documentation index page
-    firefox _build/html/index.html
+Bạn có thể sử dụng các công cụ:
 
+- `Ahrefs Backlink Checker <https://ahrefs.com/backlink-checker>`_
+- `Majestic SEO <https://majestic.com/>`_
+- `Google Search Console <https://search.google.com/search-console>`_
 
-Using the example in your own project
--------------------------------------
+5. Code ví dụ kiểm tra backlink
+-------------------------------
 
-If you are new to Read the Docs, you may want to refer to the `Read the Docs User documentation <https://docs.readthedocs.io/>`_.
+.. code-block:: python
+   :caption: Python script kiểm tra backlink đơn giản
 
-If you are copying this code in order to get started with your documentation, you need to:
+   import requests
+   from bs4 import BeautifulSoup
 
-#. place your ``docs/`` folder alongside your Python project. If you are starting a new project, you can adapt the `pyproject.toml` example configuration.
-#. use your existing project repository or create a new repository on Github, GitLab, Bitbucket or another host supported by Read the Docs
-#. copy ``.readthedocs.yaml`` and the ``docs/`` folder into your project.
-#. customize all the files, replacing example contents.
-#. add your own Python project, replacing the ``pyproject.toml`` configuration and ``lumache.py`` module.
-#. rebuild the documenation locally to see that it works.
-#. *finally*, register your project on Read the Docs, see `Importing Your Documentation <https://docs.readthedocs.io/en/stable/intro/import-guide.html>`_.
+   def check_backlinks(url):
+       response = requests.get(url)
+       soup = BeautifulSoup(response.text, 'html.parser')
+       return [link.get('href') for link in soup.find_all('a')]
 
+   # Sử dụng
+   print(check_backlinks('https://example.com'))
 
-Read the Docs tutorial
-----------------------
+6. Kết luận
+-----------
 
-To get started with Read the Docs, you may also refer to the `Read the Docs tutorial <https://docs.readthedocs.io/en/stable/tutorial/>`__.
-It provides a full walk-through of building an example project similar to the one in this repository.
+**Backlink chất lượng** sẽ giúp:
+
+- :fa:`arrow-up` *Tăng thứ hạng* từ khóa
+- :fa:`users` Mở rộng đối tượng tiếp cận
+- :fa:`shield-alt` Xây dựng uy tín thương hiệu
+
+.. note::
+   Luôn ưu tiên chất lượng hơn số lượng khi xây dựng backlink. Theo `Search Engine Journal <https://www.searchenginejournal.com/why-quality-backlinks-matter/374518/>`_, 1 backlink từ site DA 80+ có giá trị hơn 100 backlink DA 20.
+
+.. raw:: html
+
+   <div style="background: #f5f5f5; padding: 15px; border-left: 4px solid #ff9900; margin-top: 20px;">
+   <p><strong>Tài liệu tham khảo thêm:</strong></p>
+   <ul>
+   <li><a href="https://backlinko.com/seo-techniques" target="_blank">Backlinko: 17 SEO Techniques That Actually Work</a></li>
+   <li><a href="https://neilpatel.com/what-are-backlinks/" target="_blank">Neil Patel: Backlink là gì?</a></li>
+   </ul>
+   </div>
