@@ -115,26 +115,30 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/guest-blogging/>`_, **6
 ---------------------------
 
 ### 3.1 Cấu trúc bài mẫu
-.. raw:: html
 
-   <div class="sd-card sd-mb-3">
-   <div class="sd-card-header">
-   <h4>Template bài guest post chất lượng</h4>
-   </div>
-   <div class="sd-card-body">
-   <ol>
-   <li><strong>Tiêu đề hấp dẫn</strong>: "10 Xu hướng [Ngành] năm 2025 (Dữ liệu từ Nghiên cứu)"</li>
-   <li><em>Mở bài</em>: Nêu vấn đề độc giả quan tâm</li>
-   <li>Phần chính: Chia thành 3-5 mục rõ ràng</li>
-   <li>Kết bài: Tóm tắt + CTA (để lại bình luận)</li>
-   </ol>
-   </div>
-   </div>
+.. rst-class:: sd-shadow-sm
+.. rst-class:: sd-rounded-3
+
+.. container:: sd-card
+
+   .. rst-class:: sd-card-header
+   
+   **Template bài guest post chất lượng**
+
+   .. rst-class:: sd-card-body
+   
+   1. **Tiêu đề hấp dẫn**: "10 Xu hướng [Ngành] năm 2025 (Dữ liệu từ Nghiên cứu)"
+   2. *Mở bài*: Nêu vấn đề độc giả quan tâm
+   3. Phần chính: Chia thành 3-5 mục rõ ràng
+   4. Kết bài: Tóm tắt + CTA (để lại bình luận)
 
 ### 3.2 Quy tắc chèn backlink
-.. list-table:: 
+
+.. list-table:: Vị trí đặt backlink tối ưu
    :widths: 30 70
    :header-rows: 1
+   :class: longtable
+   :align: center
 
    * - **Vị trí**
      - **Mô tả**
