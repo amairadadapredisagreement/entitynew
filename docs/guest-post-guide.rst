@@ -47,23 +47,30 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/guest-blogging/>`_, **6
      - Lượt xem thực tế
 
 ### 1.2 Cách tìm website tiềm năng
+
 **Phương pháp 1**: Dùng Google Dork
+
 .. code-block:: none
+   :linenos:
+   :emphasize-lines: 1,3
 
    site:.edu "write for us" + "your niche"
    intitle:"guest post by" + "marketing"
    "submit a guest post" + inurl:blog
 
 **Phương pháp 2**: Dùng Ahrefs
+
 .. code-block:: python
    :caption: Tìm site chấp nhận guest post
+   :linenos:
+   :emphasize-lines: 3-6
 
    import ahrefs_api
 
    def find_guest_post_sites(keyword):
        params = {
            'target': f"inurl:write-for-us OR inurl:guest-post {keyword}",
-           'mode': 'domain',
+           'mode': 'domain', 
            'limit': 50
        }
        return ahrefs_api.get(params)
