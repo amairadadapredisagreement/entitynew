@@ -98,4 +98,5 @@ Bạn có thể sử dụng các công cụ:
    Home <self>
    backlink-types
    backlink-la-gi
+   backlink-importance
 
