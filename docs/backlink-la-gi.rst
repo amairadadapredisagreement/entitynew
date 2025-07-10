@@ -3,7 +3,7 @@
 Backlink là gì? Giải thích Toàn tập cho Người mới A-Z
 =====================================================
 
-.. figure:: https://moz.com/images/assets/features/why-are-backlinks-important-to-seo.png
+.. figure:: https://moz.com/images/assets/features/why-are-backlinks-important-to-seo.png?auto=compress%2Cformat&fit=crop&dm=1700500599&s=1e717cdc3e322c33e79b697fcb13a253
    :alt: Minh họa backlink
    :width: 600
    :align: center
