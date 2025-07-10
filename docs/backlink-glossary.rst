@@ -110,34 +110,48 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/seo-terms/>`_, việc h
 4. Công cụ & Thuật ngữ kỹ thuật
 -------------------------------
 
-.. tabs::
+.. tab-set::
 
-   .. tab:: Công cụ phân tích
+   .. tab-item:: Công cụ phân tích
+      :sync: tools
 
-      - `Ahrefs Site Explorer <https://ahrefs.com/site-explorer>`_
-      - `Majestic SEO <https://majestic.com>`_
-      - `Google Search Console <https://search.google.com/search-console>`_
+      - **Ahrefs**: `Site Explorer <https://ahrefs.com/site-explorer>`_ (Phân tích backlink mạnh nhất)
+      - **Majestic**: `Backlink History <https://majestic.com/reports/backlink-history>`_ (Theo dõi TF/CF)
+      - **Google**: `Search Console <https://search.google.com/search-console>`_ (Backlink miễn phí)
 
-   .. tab:: Thuật ngữ nâng cao
+   .. tab-item:: Thuật ngữ nâng cao
+      :sync: terms
 
       .. glossary::
 
          Disavow
-            Công cụ của Google để *từ chối* backlink xấu. Ví dụ file:
+            File từ chối backlink độc hại. Ví dụ:
 
             .. code-block:: text
                :caption: disavow.txt
 
-               # Liên kết từ spam site
+               # Link spam từ PBN
                domain:spam-site.com
-               https://spam-site.com/bad-page.html
+               https://spam-site.com/bad-link.html
 
          Link Sculpting
-            Kỹ thuật điều hướng *link juice* bằng `rel="nofollow"`.
+            Kỹ thuật điều hướng link juice bằng thuộc tính ``rel``:
 
-         Broken Link Building
-            Tìm link hỏng trên site khác và đề xuất thay bằng link của bạn.
+            .. code-block:: html
 
+               <a href="page.html" rel="nofollow">Trang phụ</a>
+
+         Link Velocity
+            Tốc độ gia tăng backlink theo thời gian. Script kiểm tra:
+
+            .. code-block:: python
+               :caption: link_velocity.py
+
+               import ahrefs_api
+
+               def check_velocity(domain):
+                   data = ahrefs_api.get_backlinks(domain)
+                   return data['new_links'] / data['days']
 5. Bảng tra cứu nhanh
 ---------------------
 
