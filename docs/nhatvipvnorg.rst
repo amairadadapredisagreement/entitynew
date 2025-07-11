@@ -17,4 +17,6 @@ Email: hello@nhatvipvn.org
 
 Website: https://www.nhatvipvn.org/
 
+Author: https://www.nhatvipvn.org/albert-nguyen-khanh/
+
 #nhatvip #nhatvipgame #cong_game_nhatvip
