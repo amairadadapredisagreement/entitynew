@@ -122,42 +122,63 @@ Theo nghiên cứu từ `Backlinko <https://backlinko.com/backlink-strategy>`_, 
 ---------------------------
 
 ### 4.1 Lọc backlink giá trị
-.. tabs::
 
-   .. tab:: Theo DR
+.. tab-set::
+
+   .. tab-item:: Theo chỉ số DR
       :sync: dr
 
-      1. Vào **Backlinks**
-      2. Filter: `Domain Rating ≥ 40`
-      3. Sắp xếp theo `DR: Desc`
+      1. Truy cập **Site Explorer** > **Backlinks**
+      2. Sử dụng bộ lọc:
+         - ``Domain Rating ≥ 40``
+         - ``First seen: Last 6 months``
+      3. Sắp xếp theo ``DR: Descending``
+      4. Xuất danh sách (CSV/Excel)
 
-   .. tab:: Theo loại
+   .. tab-item:: Theo loại link
       :sync: type
 
-      - `Dofollow` = Yes
-      - `Link Type` = Editorial
-      - `HTTP Code` = 200
+      - ✅ ``Dofollow = Yes``
+      - ✏️ ``Link Type = Editorial``
+      - 🟢 ``HTTP Code = 200``
+      - 🚫 ``Link Type ≠ Sponsored/UGC``
+      - 📌 ``Position = In content``
 
-### 4.2 Tiếp cận website chất lượng
+### 4.2 Chiến lược tiếp cận
+
+**Email template** (tỷ lệ phản hồi cao):
+
 .. code-block:: text
    :caption: outreach_template.txt
+   :linenos:
+   :emphasize-lines: 3,7,10
 
-   Chủ đề: Góp ý về bài viết liên quan đến [Ngành]
+   Chủ đề: Gợi ý tài nguyên [Chủ đề] chất lượng hơn
 
-   Xin chào [Tên],
+   Xin chào [Tên biên tập],
 
-   Tôi thấy bạn đã đề cập đến [Đối thủ] trong bài:
-   [URL_Bài_viết]
+   Tôi là [Tên bạn] từ [Công ty]. Tôi đánh giá cao bài viết của bạn:
+   "[Tiêu đề bài viết]" ([URL])
 
-   Chúng tôi có nội dung chất lượng hơn về [Chủ_đề]:
-   - [Điểm_khác_biệt_1]
-   - [Điểm_khác_biệt_2]
+   Chúng tôi vừa xuất bản nội dung cập nhật về [Chủ đề] với:
+   - [Điểm khác biệt 1]: Dữ liệu nghiên cứu mới nhất 2024
+   - [Điểm khác biệt 2]: Hướng dẫn từng bước chi tiết
+   - [Điểm khác biệt 3]: Case study thực tế
 
-   Bạn có muốn tham khảo và cập nhật không?
-   [Link_bài_của_bạn]
+   Bạn có thể xem tại: [URL bài viết của bạn]
 
-   Cảm ơn,
-   [Tên]
+   Nếu thấy phù hợp, bạn có thể cân nhắc thêm link tham khảo cho độc giả.
+
+   Cảm ơn và mong nhận được phản hồi!
+   [Tên đầy đủ]
+   [Chức vụ]
+   [Email/SĐT]
+   [Website]
+
+**Công cụ hỗ trợ**:
+- `Hunter.io <https://hunter.io/>`_ (tìm email)
+- `Mailchimp <https://mailchimp.com/>`_ (quản lý chiến dịch)
+- `Streak <https://www.streak.com/>`_ (theo dõi email)
 
 5. Case study thực tế
 ---------------------
