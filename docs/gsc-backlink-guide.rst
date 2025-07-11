@@ -43,105 +43,210 @@ Theo báo cáo từ `Google Developers <https://developers.google.com/search/doc
      - Các domain bên ngoài trỏ backlink về website của bạn
      - example.com
 
-2. Phân tích chi tiết từng mục
--------------------------------
+2. Phân tích chi tiết các thành phần backlink
+============================================
 
-### 2.1 Trang web liên kết hàng đầu
-**Cách sử dụng**:
-- Click vào từng domain để xem:
-  - URL nguồn (trang chứa link)
-  - URL đích (trang được trỏ đến)
-  - Anchor text sử dụng
+## 2.1 Trang web liên kết hàng đầu
+### Cách phân tích hiệu quả
 
-.. admonition:: 💡 Mẹo phân tích
+1. **Tương tác với báo cáo**:
+   - Click vào từng domain để xem chi tiết:
+     * URL nguồn (trang chứa backlink)
+     * URL đích (trang được trỏ đến)
+     * Anchor text được sử dụng
+
+2. **Đánh giá chất lượng**:
+   - Ưu tiên các domain có:
+     * TLD chất lượng (`.gov`, `.edu`, `.org`)
+     * Domain Authority (DA) cao
+     * Nội dung liên quan đến lĩnh vực của bạn
+
+.. admonition:: 🔍 Mẹo phân tích nâng cao
    :class: tip
 
-   - Tìm site có **Authority cao** (gov, edu, news)
-   - Kiểm tra link **Dofollow/Nofollow** bằng:
-     .. code-block:: python
-        :caption: Kiểm tra link type
+   Để kiểm tra loại link (Dofollow/Nofollow) tự động, có thể sử dụng script Python:
 
-        import requests
-        from bs4 import BeautifulSoup
+   .. code-block:: python
+      :caption: Hàm kiểm tra thuộc tính rel của link
+      :linenos:
 
-        def check_link_type(url):
-            res = requests.get(url)
-            soup = BeautifulSoup(res.text, 'html.parser')
-            return [a.get('rel') for a in soup.find_all('a') if 'href' in a.attrs]
+      import requests
+      from bs4 import BeautifulSoup
 
-### 2.2 Anchor text phổ biến
-.. csv-table:: Ví dụ dữ liệu anchor
+      def check_link_type(url):
+          """Phân tích các liên kết trên trang và trả về thuộc tính rel"""
+          try:
+              res = requests.get(url, timeout=10)
+              soup = BeautifulSoup(res.text, 'html.parser')
+              return {
+                  'url': url,
+                  'link_types': [
+                      a.get('rel', ['dofollow'])[0] 
+                      for a in soup.find_all('a') 
+                      if a.has_attr('href')
+                  ]
+              }
+          except Exception as e:
+              return {'error': str(e)}
+
+## 2.2 Phân tích Anchor Text
+### Dữ liệu thống kê
+
+.. csv-table:: Phân bổ anchor text phổ biến
    :file: data/gsc_anchor.csv
-   :widths: 40,30,30
+   :widths: 50,25,25
    :header-rows: 1
+   :align: center
 
-*File data/gsc_anchor.csv*:
+*File dữ liệu mẫu*: ``data/gsc_anchor.csv``
+
 .. code-block:: text
-   :caption: gsc_anchor.csv
+   :caption: Nội dung file CSV mẫu
+   :linenos:
 
    Anchor Text,Số lần xuất hiện,Tỷ lệ
    "dịch vụ SEO",142,12%
    "xem thêm",97,8%
    "tại đây",65,5%
+   "[brand name]",120,10%
+   "đọc tiếp",88,7%
 
-3. Xuất dữ liệu từ GSC
-----------------------
+.. note::
+   Anchor text tự nhiên nên có sự đa dạng:
+   - 50% brand name
+   - 20% anchor chứa từ khóa
+   - 30% anchor generic (xem thêm, tại đây...)
 
-### 3.1 Xuất báo cáo thủ công
-1. Trên giao diện GSC, chọn **Xuất báo cáo**
-2. Chọn định dạng:
-   - Google Sheets
-   - CSV
-   - Excel
+3. Xuất dữ liệu backlink từ Google Search Console
+================================================
 
-### 3.2 Sử dụng API (nâng cao)
+## 3.1 Xuất báo cáo thủ công
+### Các bước thực hiện
+
+1. Truy cập báo cáo **Liên kết bên ngoài** trong GSC
+2. Nhấp vào nút **Xuất báo cáo** ở góc trên bên phải
+3. Chọn định dạng xuất:
+
+   .. list-table:: Các định dạng xuất dữ liệu
+      :widths: 30 70
+      :header-rows: 1
+
+      * - **Định dạng**
+        - **Mô tả**
+      * - Google Sheets
+        - Tự động đồng bộ với tài khoản Google Drive
+      * - CSV
+        - Dữ liệu thuần, tương thích với nhiều công cụ
+      * - Excel (.xlsx)
+        - Định dạng phổ biến, hỗ trợ định dạng bảng
+
+## 3.2 Tự động hóa qua Search Console API
+### Thiết lập API cơ bản
+
 .. code-block:: python
-   :caption: Lấy dữ liệu qua GSC API
+   :caption: Lấy dữ liệu backlink qua API
    :linenos:
-   :emphasize-lines: 6-9,14
+   :emphasize-lines: 6-9,14,17-18
+   :name: gsc-api-code
 
    from google.oauth2 import service_account
    from googleapiclient.discovery import build
+   from googleapiclient.errors import HttpError
 
-   # Xác thực
+   # 1. Thiết lập xác thực
    credentials = service_account.Credentials.from_service_account_file(
-       'service-account.json',
-       scopes=['https://www.googleapis.com/auth/webmasters']
+       'service-account.json',  # File service account từ Google Cloud
+       scopes=['https://www.googleapis.com/auth/webmasters.readonly']
    )
 
+   # 2. Khởi tạo service
    service = build('searchconsole', 'v1', credentials=credentials)
 
-   # Lấy dữ liệu backlink
-   response = service.sites().list().execute()
-   links = service.externalLinks().list(siteUrl='sc-domain:example.com').execute()
+   try:
+       # 3. Truy vấn dữ liệu backlink
+       site_list = service.sites().list().execute()
+       links_data = service.externalLinks().list(
+           siteUrl='sc-domain:example.com',  # Thay bằng domain của bạn
+           body={
+               'aggregationType': 'byPage',
+               'rowLimit': 5000
+           }
+       ).execute()
 
-   print(f"Tổng số backlink: {links['total']}")
+       print(f"Tổng số backlink: {links_data.get('total', 0)}")
+       print(f"Chi tiết: {links_data.get('externalLink', [])[:5]}...")
 
-4. Cảnh báo backlink xấu
-------------------------
+   except HttpError as error:
+       print(f"Lỗi API: {error.resp.status} - {error._get_reason()}")
 
-### 4.1 Dấu hiệu nhận biết
-.. raw:: html
+.. note::
+   Cần thiết lập trước:
+   - Bật Google Search Console API trong Google Cloud Console
+   - Tạo Service Account và cấp quyền **Search Console Admin**
+   - Tải file JSON xác thực và lưu vào `service-account.json`
 
-   <div class="admonition warning">
-   <p class="admonition-title">Cảnh báo từ Google</p>
-   <ul>
-   <li>Link từ site <strong>spam/bán link</strong></li>
-   <li>Anchor text <em>over-optimized</em> (ví dụ: "mua iPhone rẻ")</li>
-   <li>Tỷ lệ link <strong>dofollow</strong> bất thường (>80%)</li>
-   </ul>
-   </div>
+.. seealso::
+   - `Tài liệu chính thức GSC API <https://developers.google.com/webmaster-tools>`_
+   - `Hướng dẫn tạo Service Account <https://cloud.google.com/iam/docs/creating-managing-service-accounts>`_
 
-### 4.2 Cách xử lý
-1. Vào **Bảo mật và quyền riêng tư** > **Liên kết ngược**
-2. Tải file `disavow.txt` lên
-3. Mẫu file:
-   .. code-block:: text
-      :caption: disavow.txt
+4. Phát hiện và xử lý backlink xấu
+==================================
 
-      # Link xấu từ spam site
-      domain:spam-site.com
-      https://spam-site.com/bad-page.html
+## 4.1 Nhận diện backlink có hại
+
+.. danger:: Các dấu hiệu backlink độc hại cần cảnh giác
+
+   * **Nguồn đáng ngờ**:
+     - Domain có chỉ số spam cao (Spam Score > 30%)
+     - Site bán textlink, PBN (Private Blog Network)
+     - Trang web có nội dung không liên quan đến lĩnh vực của bạn
+
+   * **Đặc điểm anchor text**:
+     - Tỷ lệ anchor chứa từ khóa quá cao (>40%)
+     - Anchor trùng lặp hàng loạt với cùng một từ khóa
+     - Sử dụng từ khóa thương mại không tự nhiên (ví dụ: "mua iPhone giá rẻ nhất 2024")
+
+   * **Đặc điểm liên kết**:
+     - Tỷ lệ dofollow bất thường (>80%)
+     - Link xuất hiện trong footer/navigation site-wide
+     - Link từ các trang có nội dung tự động (auto-generated content)
+
+## 4.2 Quy trình xử lý backlink xấu
+
+### Bước 1: Tạo file disavow
+
+.. code-block:: text
+   :caption: Cấu trúc file disavow.txt chuẩn
+   :linenos:
+   :emphasize-lines: 1,4,7
+
+   # Bình luận bắt đầu bằng dấu #
+   # Chặn toàn bộ domain
+   domain:spam-site.com
+   
+   # Chặn URL cụ thể
+   https://spam-site.com/bad-page.html
+   
+   # Chặn subdomain
+   domain:blog.spam-network.org
+
+### Bước 2: Gửi yêu cầu disavow tới Google
+
+1. Truy cập **Google Search Console**
+2. Chọn property cần xử lý
+3. Vào mục **Bảo mật và quyền riêng tư** > **Liên kết ngược**
+4. Tải lên file `disavow.txt` đã chuẩn bị
+5. Xác nhận gửi yêu cầu
+
+.. important::
+   * Chỉ sử dụng disavow khi thực sự cần thiết
+   * Sao lưu file disavow trước khi cập nhật
+   * Chờ ít nhất 4-8 tuần để Google xử lý
+   * Theo dõi lại trong báo cáo **Liên kết không tự nhiên**
+
+.. seealso::
+   * `Hướng dẫn chính thức về disavow links <https://support.google.com/webmasters/answer/2648487>`_
+   * `Công cụ kiểm tra spam score: Moz Spam Score, Ahrefs Domain Rating`
 
 5. Case study thực tế
 ---------------------
