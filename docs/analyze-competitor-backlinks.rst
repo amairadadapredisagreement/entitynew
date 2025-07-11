@@ -44,13 +44,16 @@ Theo nghiên cứu từ `Backlinko <https://backlinko.com/backlink-strategy>`_, 
 ------------------------------
 
 ### 2.1 Xuất dữ liệu backlink
+
 .. code-block:: python
    :caption: Xuất backlink bằng Ahrefs API
    :linenos:
+   :emphasize-lines: 3,6,9
 
    import requests
 
    def get_competitor_backlinks(domain):
+       """Lấy danh sách backlink từ API Ahrefs"""
        url = "https://api.ahrefs.com/v2/site-explorer/backlinks"
        params = {
            'target': domain,
@@ -63,22 +66,30 @@ Theo nghiên cứu từ `Backlinko <https://backlinko.com/backlink-strategy>`_, 
        return response.json()
 
 **Các bước thủ công**:
-1. Vào **Backlinks** > **All**
-2. Chọn **Export** > **CSV**
-3. Tải về và phân tích bằng Excel/Python
+
+1. Đăng nhập `Ahrefs <https://ahrefs.com/>`_
+2. Vào **Site Explorer** > Nhập domain đối thủ
+3. Chọn tab **Backlinks** > **All**
+4. Nhấn **Export** > Chọn **CSV**
+5. Tải về và phân tích bằng Excel/Python
 
 ### 2.2 Phân loại backlink chất lượng
-.. raw:: html
 
-   <div class="admonition tip">
-   <p class="admonition-title">Tiêu chí đánh giá</p>
-   <ol>
-   <li><strong>Domain Authority</strong> (DA ≥ 40)</li>
-   <li><em>Link Type</em> (Dofollow, Editorial)</li>
-   <li><strong>Anchor Text</strong> (Tự nhiên, không over-optimized)</li>
-   <li>Vị trí đặt link (Content > Footer/Sidebar)</li>
-   </ol>
-   </div>
+.. admonition:: 🔍 Tiêu chí đánh giá backlink chất lượng
+   :class: tip
+
+   .. list-table::
+      :widths: 30 70
+      :header-rows: 0
+
+      * - **Domain Authority**
+        - Chọn site có DA ≥ 40 (kiểm tra bằng `MozBar <https://moz.com/products/pro/seo-toolbar>`_)
+      * - **Link Type**
+        - Ưu tiên: *Dofollow*, *Editorial*, *Contextual*
+      * - **Anchor Text**
+        - Tự nhiên, không spam (tỷ lệ branded ≥ 40%)
+      * - **Vị trí đặt link**
+        - Trong nội dung > Sidebar/Footer
 
 3. Phân tích Anchor Text
 ------------------------
