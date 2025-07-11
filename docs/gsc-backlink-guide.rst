@@ -14,6 +14,7 @@ Theo báo cáo từ `Google Developers <https://developers.google.com/search/doc
 --------------------------------------
 
 ### 1.1 Các bước cơ bản
+
 .. code-block:: none
    :caption: Đường dẫn truy cập
    :linenos:
@@ -23,21 +24,23 @@ Theo báo cáo từ `Google Developers <https://developers.google.com/search/doc
    3. Menu bên trái > Liên kết > Liên kết bên ngoài
 
 ### 1.2 Cấu trúc báo cáo
-.. list-table:: Các mục chính trong báo cáo
-   :widths: 25 50 25
+
+.. list-table:: Các thành phần chính trong báo cáo backlink
+   :widths: 30 45 25
    :header-rows: 1
+   :align: left
 
    * - **Mục**
      - **Ý nghĩa**
      - **Dữ liệu mẫu**
    * - Trang liên kết nhiều nhất
-     - URL nhận nhiều backlink nhất
+     - Các URL trên website của bạn nhận được nhiều backlink nhất
      - 1,245 liên kết
    * - Trang đích hàng đầu
-     - URL được trỏ đến nhiều nhất
+     - Các URL được các backlink trỏ đến nhiều nhất
      - /blog/seo
    * - Trang web liên kết hàng đầu
-     - Domain trỏ link về bạn
+     - Các domain bên ngoài trỏ backlink về website của bạn
      - example.com
 
 2. Phân tích chi tiết từng mục
