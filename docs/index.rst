@@ -107,4 +107,5 @@ Bạn có thể sử dụng các công cụ:
    brand-mentions-to-backlinks
    top-backlink-tools
    analyze-competitor-backlinks
+   gsc-backlink-guide
 
