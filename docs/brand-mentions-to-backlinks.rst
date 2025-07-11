@@ -179,24 +179,24 @@ Theo nghiên cứu từ `Ahrefs <https://ahrefs.com/blog/brand-mentions/>`_, **6
 Kết luận
 --------
 
-.. grid:: 1 2 2
-   :gutter: 3
+.. list-table:: 
+   :widths: 50 50
+   :header-rows: 0
+   :class: sd-rounded-3 sd-shadow-sm
 
-   .. grid-item-card::
-      :class: sd-shadow-sm
-      :text-align: center
+   * - .. rst-class:: text-center
+     
+          **📈 Hiệu quả**
+          
+          - Tỷ lệ thành công: 58%
+          - Chi phí: $0.2/backlink
 
-      **📈 Hiệu quả**
-      - Tỷ lệ thành công: 58%
-      - Chi phí: $0.2/backlink
-
-   .. grid-item-card::
-      :class: sd-shadow-sm
-      :text-align: center
-
-      **⏳ Tối ưu**
-      - 10-15 email/ngày
-      - 2-3 backlink/tuần
+     - .. rst-class:: text-center
+     
+          **⏳ Tối ưu**
+          
+          - 10-15 email/ngày
+          - 2-3 backlink/tuần
 
 .. raw:: html
 
