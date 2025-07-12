@@ -15,4 +15,6 @@ Email: info@yeu88.eu.com.
 
 Website: https://yeu88.eu.com/
 
+Author: https://yeu88.eu.com/tac-gia/thanhnhiyeu88/
+
 #yeu88 #trangchuyeu88 #dangkyyeu88 #dangnhapyeu88 #linkyeu88
