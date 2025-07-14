@@ -1,4 +1,4 @@
-99OK - 99ok.ru.com - Sân chơi trực tuyến đẳng cấp số 1 tại châu Á
+99OK - Toàn Cảnh Đáng Kinh Ngạc Về Nhà Cái Số 1 Châu Á
 ===================================================
 
 `99OK <https://99ok.ru.com/>`_ - sân chơi trực tuyến đẳng cấp số 1 tại châu Á, nơi anh em có thể thỏa sức cá cược và chơi game giải trí online với những sản phẩm minh bạch, uy tín.
